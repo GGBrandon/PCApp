@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "72533082666",
+    "firebase_url": "https://pcapp-30dc5.firebaseio.com",
+    "project_id": "pcapp-30dc5",
+    "storage_bucket": "pcapp-30dc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72533082666:android:d97911ca30e2547c79f953",
+        "android_client_info": {
+          "package_name": "PCApp.android.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72533082666-c2b8ktqk4nsvhupgqpesu3c23gfucpe8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "PCApp.android.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "72533082666-eaehiprkpuukub9gv8kgge02ki0opik1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFulmoipVSHxbNH-0tiDfwUAZwbcSJr2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72533082666-eaehiprkpuukub9gv8kgge02ki0opik1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

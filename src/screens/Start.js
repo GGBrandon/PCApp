@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
-import { firebase } from '@react-native-firebase/auth';
+//import { firebase } from '@react-native-firebase/auth';
 
-export default class LoadingScreen extends React.Component {
+export default class Start extends React.Component {
     static navigationOptions = {
         title: 'Loading',
         headerLeft: () => null

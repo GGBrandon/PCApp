@@ -8,9 +8,9 @@ export default class Start extends React.Component {
         headerLeft: () => null
     }
     componentDidMount() {
-        firebase.auth().onAuthStateChanged(user => {
-            this.props.navigation.navigate(user ? 'BookListScreen' : 'LoginScreen')
-        })
+        // firebase.auth().onAuthStateChanged(user => {
+        //     this.props.navigation.navigate(user ? 'BookListScreen' : 'LoginScreen')
+        // })
     }
 
     render() {

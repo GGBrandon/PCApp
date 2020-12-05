@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
 
 
     item: {
-        padding:16,
-        marginTop: 16,
+        padding:18,
+        marginTop: 10,
         borderColor: '#000',
-        borderWidth: 1,
-        borderStyle: 'dashed',
-        borderRadius: 10
+        borderWidth: 2,
+        borderStyle: 'solid',
+        borderRadius: 20
 
     }
 

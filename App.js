@@ -1,6 +1,7 @@
 
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Alert, TouchableWithoutFeedback,
+Keyboard } from 'react-native';
 import Header from './components/header';
 import ToDoItem from './components/todoitem';
 import addTodo from './components/addTodo';
@@ -8,10 +9,7 @@ import AddToDo from './components/addTodo';
 
 export default function App() {
     const [todos, setTodos] = useState([
-        { text: '1', key: '1' },
-        { text: '2', key: '2' },
-        { text: '3', key: '3' }
-
+     
     ]);
 
     const pressHandler = (key) => {
@@ -23,16 +21,29 @@ export default function App() {
     }
 
     const submitHandler = (text) => {
-        setTodos((prevTodos) => {
-            return[
-                { text: text, key: Math.random().toString() },
-                ...prevTodos
 
-            ];
-        })
+        if(text.length >= 2){
+            setTodos((prevTodos) => {
+                return[
+                    { text: text, key: Math.random().toString() },
+                    ...prevTodos
+
+                ];
+            });
+        } else {
+            Alert.alert('Error' , 'Must be at least 2 Characters long',[
+                {text: 'OKAY', onPress: () => console.log('alert close')}
+            ])
+        }
     }
 
+
+
     return (
+        <TouchableWithoutFeedback onPress={() => {
+            Keyboard.dismiss();
+            console.log('dismissed keyboard')
+        }}>
         <View style={styles.container}>
           <Header />
           <View style={styles.content}>
@@ -47,16 +58,17 @@ export default function App() {
             </View>
           </View>
         </View>
+        </TouchableWithoutFeedback>
       );
     }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff', 
+        backgroundColor: 'white', 
     }, 
     content: {
-        padding: 40,
+        padding: 30,
     },
     list: {
         marginTop:20,
